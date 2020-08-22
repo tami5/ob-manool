@@ -1,0 +1,31 @@
+* ob-manool
+
+Simple implementation to add support for [[https://github.com/rusini/manool][MANOOL
+Programming language]] in org and org-babel.
+
+** Setup:
+- Clone and load ~./ob-manool.el~
+- In your ~.emacs.d/init~ and add the following:
+
+#+begin_src emacs-lisp :tangle yes
+(require 'ob-manool)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((manool . t)))
+#+end_src
+
+So far it enables the user to test and execute MANOOL code inside org file.
+
+** Test:
+#+BEGIN_SRC org
+#+BEGIN_SRC manool
+{
+ {extern "manool.org.18/std/0.6/all"}
+ in Out.WriteLine["I got tested!!"]
+}
+#+END_SRC
+
+#+RESULTS:
+: I got tested!!
+#+END_SRC
