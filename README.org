@@ -19,13 +19,13 @@ So far it enables the user to test and execute MANOOL code inside org file.
 
 ** Test:
 #+BEGIN_SRC org
-#+BEGIN_SRC manool
+,#+BEGIN_SRC manool
+
 {
  {extern "manool.org.18/std/0.6/all"}
  in Out.WriteLine["I got tested!!"]
 }
-#+END_SRC
 
-#+RESULTS:
-: I got tested!!
+,#+END_SRC
+,: I got tested!!
 #+END_SRC
